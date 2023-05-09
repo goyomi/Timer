@@ -1,0 +1,45 @@
+h1,h2 {
+  text-align: center;
+  margin: 0;
+}
+.timerContainer{
+  /* box-shadow: 0 0 10px blue; */
+}
+.timerBox {
+  width: 400px;
+  height: 360px;
+  margin: 0 auto;
+  background-color: #5572BB;
+  border-radius: 16px;
+  /* box-shadow: 0 0 10px red; */
+}
+h2 {
+  padding-top: 48px;
+  color: white;
+}
+.times {
+  /* box-shadow: 0 0 10px green; */
+  width: 284px;
+  padding: 40px 58px;
+}
+
+.hrs,.min,.sec {
+  width: 80px;
+  height: 80px;
+  /* box-shadow: 0 0 10px hotpink; */
+}
+
+.btns {
+  padding: 40px 82px;
+}
+button{
+  width: 112px;
+  height: 48px;
+  border: none;
+}
+.start {
+  background: url(./img/button/start-disabled.svg) no-repeat;
+}
+.reset {
+  background: url(./img/button/reset-disabled.svg) no-repeat;
+}

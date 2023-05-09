@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <article class="timerContainer">
+      <h1>Timer</h1>
+      <div class="timerBox">
+        <h2>TIMER</h2>
+        <div class="times">
+          <input class="hrs box" type="text" value="00">
+          <input class="min box" type="text" value="00">
+          <input class="sec box" type="text" value="00">
+        </div>
+        <div class = "btns">
+        <button class="start" type="button"></button>
+        <button class="reset" type="button"></button>
+        </div>
+      </div>
+    </article>
+
+    <script>
+      const hrs = document.querySelector('.hrs')
+      const min = document.querySelector('.min')
+      const sec = document.querySelector('.sec')
+      const boxs = document.querySelectorAll('.box')
+
+      // 박스 눌렀을 때 리셋, 값 입력 받기
+      for (let i = 0; i < boxs.length; i++) {
+        boxs[i].addEventListener("click", (e)=> {
+          boxs[i].value = '';
+        })
+      }
+
+      const btnStart = document.querySelector('.start') 
+      const btnReset = document.querySelector('.reset')
+
+      // 버튼 눌렀을때 이미지 바꾸기, 한번더 누르면 원래 이미지로 
+      btnStart.addEventListener('click', (e)=>{
+        if(btnStart.style.background.includes('disabled')){
+          btnStart.style.background = 'url(./img/button/start-default.svg)'
+        } else {
+          btnStart.style.background = 'url(./img/button/start-disabled.svg)'
+        }
+      })
+
+      btnReset.addEventListener('click', (e)=>{
+        if(btnReset.style.background.includes('disabled')){
+          btnReset.style.background = 'url(./img/button/reset-default.svg)'
+        } else {
+          btnReset.style.background = 'url(./img/button/reset-disabled.svg)'
+        }
+      })
+
+    </script>
+  </body>
+</html>
